@@ -1,0 +1,43 @@
+<div class="signup">
+    <div class="signup__header">
+        <div class="signup__header-container">
+            <h1 class="signup__logo">
+                <span>time</span>
+                <span>tracker</span>
+            </h1>
+        </div>        
+    </div>
+    <div class="wrap wrap--sm">
+        <div class="signup__content">
+            <h1 *ngIf="!resError" class="signup__title">Sign In</h1>
+            <h2 *ngIf="resError" class="signup__title-err">There was an error with your information</h2>
+            <form class="signup__form" (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+                <input 
+                    type="email" 
+                    formControlName="email"
+                    required
+                    placeholder="email" 
+                    [ngClass]="{'invalid': signInForm.get('email').invalid && isSubmitted}"
+                />
+                <div *ngIf="signInForm.get('email').invalid && isSubmitted">
+                    <small *ngIf="signInForm.get('email').errors?.required" class="signup__err-msg">email is required</small>
+                    <small *ngIf="signInForm.get('email').errors?.pattern" class="signup__err-msg">please provide a valid email</small>
+                </div>
+                <input 
+                    type="password" 
+                    formControlName="password"
+                    required
+                    placeholder="password" 
+                    [ngClass]="{'invalid': signInForm.get('password').invalid && isSubmitted}"
+                />
+                <div *ngIf="signInForm.get('password').invalid && isSubmitted">
+                    <small *ngIf="signInForm.get('password').errors?.required" class="signup__err-msg">this field is required</small>
+                </div>
+                <button class="btn btn--login" type="submit">Sign In</button>
+            </form>
+            <p class="signup__link">
+                <a routerLink='/signup'>Sign up here</a> if you don't have an account
+            </p>
+        </div>
+    </div>
+</div>

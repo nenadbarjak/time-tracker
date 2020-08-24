@@ -1,0 +1,39 @@
+.message {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &::before {
+        color: var(--color-grey-light-1);
+        font-size: 8rem;
+        font-weight: 700;
+        position: absolute;
+        left: -3.5rem;
+        top: -5rem;
+        z-index: -1;
+    }
+
+    &--welcome::before {
+        content: 'Welcome';
+    }
+
+    &--hey::before {
+        content: 'Hey';
+    }
+
+    &__main {
+        font-size: 2.8rem;
+        line-height: 1;
+    }
+
+    &__bottom {
+        font-size: 1.2rem;
+
+        &--on {
+            color: var(--color-light-green);
+        }
+
+        &--off {
+            color: var(--color-purple);
+        }
+    }
+}

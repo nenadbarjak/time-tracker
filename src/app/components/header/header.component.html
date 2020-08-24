@@ -1,0 +1,7 @@
+<header class="header">
+    <div class="header__content">
+        <a *ngIf="showBack" routerLink='/dashboard' class="header__back">&lt;</a>
+        <h1 class="header__logo">tracker</h1>
+        <button (click)="onLogout()" class="header__logout">Sign Out</button>
+    </div>
+</header>

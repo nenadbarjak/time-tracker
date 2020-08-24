@@ -1,0 +1,63 @@
+.delete {
+    padding-bottom: 5rem;
+
+    &__modal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 2.6rem;
+        color: red;
+    }
+
+    &__subtitle {
+        margin-bottom: 2.5rem;
+    }
+
+    &__date {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__time {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        background-color: var(--color-grey-light-2);
+        margin-bottom: 2.5rem;
+        padding: .5rem;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__action {
+        padding: 1rem;
+        font-size: 1.6rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 0.4rem 0.8rem rgba(#000000, 0.5);
+        transition: all .2s ease;
+        
+
+        &--cancel {
+            text-decoration: none;
+            background-color: var(--color-dark-blue);
+        }
+
+        &--confirm,
+        &--confirm:active {
+            background-color: red;
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}

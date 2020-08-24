@@ -1,0 +1,12 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding-bottom: 3.5rem;
+
+    @media only screen and (min-width: 600px) {
+        height: auto;
+        max-height: 80rem;
+    }
+}

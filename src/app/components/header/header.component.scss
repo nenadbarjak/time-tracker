@@ -1,0 +1,60 @@
+.header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+
+    &__back {
+        font-size: 2rem;
+        font-weight: 900;
+        text-decoration: none;
+        color: var(--color-purple);
+
+        position: absolute;
+        left: 0;
+        top: -50%;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+
+        justify-content: flex-end;
+
+        // &--dash {
+        //     justify-content: flex-end;
+        // }
+
+        // &--report {
+        //     justify-content: space-between;
+        // }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--color-light-green);
+
+        &::before {
+            content: 'time ';
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-grey-light-2);
+
+        }
+    }
+
+    &__logout,
+    &__logout:active {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--color-purple);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

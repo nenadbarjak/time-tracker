@@ -1,0 +1,18 @@
+<div class="action">
+    <div 
+        *ngIf="!timeTrackerOn" 
+        (click)="start()"
+        class="btn btn--start"
+    >Start
+    </div>
+    <div 
+        *ngIf="timeTrackerOn" 
+        (click)="stop()"
+        class="btn btn--stop"
+    >Stop
+    </div>
+
+</div>
+<div class="report-link">
+    <a routerLink='/report'>See your daily report</a>
+</div>

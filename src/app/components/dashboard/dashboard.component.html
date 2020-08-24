@@ -1,0 +1,35 @@
+<div class="wrap">
+    <div class="dashboard">
+
+        <app-header
+            [showBack]=false
+        ></app-header>
+
+        <app-message
+            forComp="dash"
+            [timeTrackerOn]="timeTrackerOn"
+        ></app-message>
+
+        <app-info></app-info>
+
+        <app-timer
+            [hrs]="hrs"
+            [min]="min"
+            [sec]="sec"
+        ></app-timer>
+
+        <app-action
+            [timeTrackerOn]="timeTrackerOn"
+            (startClick)="startTimer()"
+            (stopClick)="stopTimer()"
+        ></app-action>
+
+    </div>  
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<div class="delete">
+    <div class="wrap">
+        <app-header
+            [showBack]=false
+        ></app-header>
+
+        <div class="delete__modal">
+            <h1 class="delete__title">Delete Time</h1>
+            <h2 class="delete__subtitle">Are you sure you want to delete time:</h2>
+            <h3 class="delete__date">On {{ time.startTime | date:'dd MMMM' }}</h3>
+            <div class="delete__time">
+                <span>{{ time.startTime | date:'HH:mm:ss' }} - {{ time.endTime | date:'HH:mm:ss' }}</span>
+                <span>{{ time.endTime - time.startTime - (60 * 60 * 1000) | date:'HH:mm:ss'}}</span>
+            </div>
+            <div class="delete__actions">
+                <a routerLink="/report" class="delete__action delete__action--cancel">Cancel</a>
+                <button (click)="deleteTime()" class="delete__action delete__action--confirm">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

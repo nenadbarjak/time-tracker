@@ -1,0 +1,14 @@
+<div class="message" [ngClass]="{'message--welcome': forComp === 'dash' && !timeTrackerOn, 'message--hey': (forComp === 'dash' && timeTrackerOn) || forComp === 'report'}">
+    <h2 class="message__main">{{ condRender() }}</h2>
+
+    <h4 
+        *ngIf="forComp === 'dash'" 
+        class="message__bottom"
+        [ngClass]="{'message__bottom--on': timeTrackerOn, 'message__bottom--off': !timeTrackerOn}"
+    >
+        <span>Your timetracker is </span>
+        <span *ngIf="timeTrackerOn">on</span>
+        <span *ngIf="!timeTrackerOn">off</span>
+    </h4>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="report">
+    <div class="wrap">
+        <app-header
+            [showBack]=true
+        >
+        </app-header>
+    
+        <app-message
+            forComp="report"
+        ></app-message>
+    
+        <app-session *ngFor="let session of times" [session]="session">
+        </app-session>
+        
+    </div>
+</div>
+
+

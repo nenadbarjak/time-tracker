@@ -1,0 +1,18 @@
+<div class="session">
+    <div class="session__header">
+        <h2>{{ day }}</h2>
+        <h2>{{ total }}</h2>
+    </div>
+    
+    <ul class="session__times" *ngFor="let time of times">
+        
+            <li class="session__time">
+                <span>{{ formatTime(time.startTime) }} - {{ formatTime(time.endTime) }}</span>
+                <a [routerLink]="['/delete', time._id]" class="session__remove">
+                    <span>remove</span>
+                </a>
+                <span>{{ formatTimeDifference(time.endTime - time.startTime) }}</span>
+            </li>     
+    </ul>
+</div>
+
